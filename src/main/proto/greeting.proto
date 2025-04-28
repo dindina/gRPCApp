@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_package = "com.example.grpc.greeting";
+option java_outer_classname = "GreetingProto";
+
+// Define the Greeting service
+service Greeter {
+  // Define a simple RPC method called "SayHello"
+  rpc SayHello (HelloRequest) returns (HelloReply);
+}
+
+// Define the request message
+message HelloRequest {
+  string name = 1;
+}
+
+// Define the response message
+message HelloReply {
+  string message = 1;
+}
